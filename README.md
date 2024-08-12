@@ -1,7 +1,7 @@
 # Hub de lectura - Visual Basic 6.0, WinForm proyecto para Mega - Liderly
 
 ## 1. Descripción
-Este repositorio contiene una aplicacion de escritorio para windows hecha con el lenguaje Visual Basic 6.0 y SQL Server (Transact SQL). Esta aplicación windows es acerca de un Hub de libros en la cual se pueden agregar usuarios, cada usuario puede seleccionar su contenido como Favoritos, libros ya leidos, libros que está leyendo, libros no deseados, ademas de poder visualizar, es posible añadir, eliminar y modificar tanto usuarios como libros. 
+Este repositorio contiene una aplicación de escritorio para windows hecha con el lenguaje Visual Basic 6.0 y SQL Server (Transact SQL). Esta aplicación windows es acerca de un Hub de libros en la cual se pueden agregar usuarios, cada usuario puede seleccionar su contenido como Favoritos, libros ya leidos, libros que está leyendo, libros no deseados, ademas de poder visualizar, es posible añadir, eliminar y modificar tanto usuarios como libros. 
 
 ### Objetivo
 El objetivo es crear una aplicación windows con visual basic 6.0 en que el usuario pueda organizar y controlar los libros que desea leer.
