@@ -10,6 +10,225 @@ Begin VB.Form FormMain
    ScaleHeight     =   11460
    ScaleWidth      =   20880
    StartUpPosition =   3  'Windows Default
+   Begin VB.Frame fraHome 
+      Caption         =   "Home"
+      Height          =   10635
+      Left            =   3120
+      TabIndex        =   14
+      Top             =   120
+      Width           =   16575
+      Begin VB.CommandButton cmdBookView 
+         Caption         =   "Ver libro"
+         Height          =   700
+         Left            =   720
+         TabIndex        =   17
+         Top             =   8240
+         Width           =   2600
+      End
+      Begin VB.CommandButton cmdAddFavorites 
+         Caption         =   "Agregar a favoritos"
+         Height          =   700
+         Left            =   720
+         TabIndex        =   16
+         Top             =   7240
+         Width           =   2600
+      End
+      Begin VB.Frame Frame2 
+         Caption         =   "AddBooks"
+         Height          =   4575
+         Left            =   4080
+         TabIndex        =   18
+         Top             =   1200
+         Width           =   12015
+         Begin VB.CommandButton cmdClear 
+            Caption         =   "Limpiar Campos"
+            Height          =   700
+            Left            =   7440
+            TabIndex        =   13
+            Top             =   240
+            Width           =   2600
+         End
+         Begin VB.CommandButton cmdAddBook 
+            Caption         =   "Agregar Libro"
+            Height          =   700
+            Left            =   3480
+            TabIndex        =   12
+            Top             =   240
+            Width           =   2600
+         End
+         Begin VB.TextBox textDescription 
+            Height          =   2490
+            Left            =   7200
+            MultiLine       =   -1  'True
+            ScrollBars      =   2  'Vertical
+            TabIndex        =   11
+            Text            =   "FormMain.frx":0000
+            Top             =   1320
+            Width           =   4455
+         End
+         Begin VB.TextBox textGenre 
+            Height          =   450
+            Left            =   1680
+            TabIndex        =   10
+            Text            =   "Genre"
+            Top             =   3165
+            Width           =   3500
+         End
+         Begin VB.TextBox textTitle 
+            Height          =   450
+            Left            =   1680
+            TabIndex        =   7
+            Text            =   "Title"
+            Top             =   1365
+            Width           =   3500
+         End
+         Begin VB.TextBox textAuthor 
+            Height          =   450
+            Left            =   1680
+            TabIndex        =   8
+            Text            =   "Author"
+            Top             =   1965
+            Width           =   3500
+         End
+         Begin VB.TextBox textYear 
+            Height          =   450
+            Left            =   1680
+            TabIndex        =   9
+            Text            =   "Year"
+            Top             =   2565
+            Width           =   3500
+         End
+         Begin VB.Label Label3 
+            Caption         =   "Descripción"
+            BeginProperty Font 
+               Name            =   "Lucida Fax"
+               Size            =   12
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   300
+            Left            =   5520
+            TabIndex        =   36
+            Top             =   1440
+            Width           =   1500
+         End
+         Begin VB.Label Label2 
+            Caption         =   "Género"
+            BeginProperty Font 
+               Name            =   "Lucida Fax"
+               Size            =   12
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   300
+            Left            =   360
+            TabIndex        =   35
+            Top             =   3240
+            Width           =   1005
+         End
+         Begin VB.Label lblTitle 
+            Caption         =   "Título"
+            BeginProperty Font 
+               Name            =   "Lucida Fax"
+               Size            =   12
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   300
+            Left            =   360
+            TabIndex        =   22
+            Top             =   1440
+            Width           =   1005
+         End
+         Begin VB.Label lblAuthor 
+            Caption         =   "Autor"
+            BeginProperty Font 
+               Name            =   "Lucida Fax"
+               Size            =   12
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   300
+            Left            =   360
+            TabIndex        =   21
+            Top             =   2040
+            Width           =   1005
+         End
+         Begin VB.Label lblyear 
+            Caption         =   "Año"
+            BeginProperty Font 
+               Name            =   "Lucida Fax"
+               Size            =   12
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   300
+            Left            =   360
+            TabIndex        =   20
+            Top             =   2640
+            Width           =   1005
+         End
+      End
+      Begin VB.CommandButton cmdSearch 
+         Caption         =   "Buscar libro"
+         Height          =   700
+         Left            =   720
+         TabIndex        =   15
+         Top             =   6240
+         Width           =   2600
+      End
+      Begin VB.CommandButton cmdDeleteBook 
+         Caption         =   "Eliminar Libro"
+         Height          =   700
+         Left            =   720
+         TabIndex        =   19
+         Top             =   9240
+         Width           =   2600
+      End
+      Begin MSComctlLib.ListView ListBooks 
+         Height          =   3975
+         Left            =   4080
+         TabIndex        =   23
+         Top             =   6240
+         Width           =   12015
+         _ExtentX        =   21193
+         _ExtentY        =   7011
+         View            =   3
+         LabelWrap       =   -1  'True
+         HideSelection   =   -1  'True
+         AllowReorder    =   -1  'True
+         FlatScrollBar   =   -1  'True
+         FullRowSelect   =   -1  'True
+         GridLines       =   -1  'True
+         _Version        =   393217
+         ForeColor       =   -2147483640
+         BackColor       =   -2147483643
+         BorderStyle     =   1
+         Appearance      =   1
+         NumItems        =   0
+      End
+      Begin VB.Image imgCoverImg 
+         Height          =   3000
+         Left            =   600
+         Top             =   2040
+         Width           =   3000
+      End
+   End
    Begin VB.Frame fraCompletedBooks 
       Caption         =   "CompletedBooks"
       Height          =   5175
@@ -293,225 +512,6 @@ Begin VB.Form FormMain
          TabIndex        =   3
          Top             =   3800
          Width           =   2175
-      End
-   End
-   Begin VB.Frame fraHome 
-      Caption         =   "Home"
-      Height          =   10635
-      Left            =   3120
-      TabIndex        =   14
-      Top             =   120
-      Width           =   16575
-      Begin VB.CommandButton cmdBookView 
-         Caption         =   "Ver libro"
-         Height          =   700
-         Left            =   720
-         TabIndex        =   17
-         Top             =   8240
-         Width           =   2600
-      End
-      Begin VB.CommandButton cmdAddFavorites 
-         Caption         =   "Agregar a favoritos"
-         Height          =   700
-         Left            =   720
-         TabIndex        =   16
-         Top             =   7240
-         Width           =   2600
-      End
-      Begin VB.Frame Frame2 
-         Caption         =   "AddBooks"
-         Height          =   4575
-         Left            =   4080
-         TabIndex        =   18
-         Top             =   1200
-         Width           =   12015
-         Begin VB.CommandButton cmdClear 
-            Caption         =   "Limpiar Campos"
-            Height          =   700
-            Left            =   7440
-            TabIndex        =   13
-            Top             =   240
-            Width           =   2600
-         End
-         Begin VB.CommandButton cmdAddBook 
-            Caption         =   "Agregar Libro"
-            Height          =   700
-            Left            =   3480
-            TabIndex        =   12
-            Top             =   240
-            Width           =   2600
-         End
-         Begin VB.TextBox textDescription 
-            Height          =   2490
-            Left            =   7200
-            MultiLine       =   -1  'True
-            ScrollBars      =   2  'Vertical
-            TabIndex        =   11
-            Text            =   "FormMain.frx":0000
-            Top             =   1320
-            Width           =   4455
-         End
-         Begin VB.TextBox textGenre 
-            Height          =   450
-            Left            =   1680
-            TabIndex        =   10
-            Text            =   "Genre"
-            Top             =   3165
-            Width           =   3500
-         End
-         Begin VB.TextBox textTitle 
-            Height          =   450
-            Left            =   1680
-            TabIndex        =   7
-            Text            =   "Title"
-            Top             =   1365
-            Width           =   3500
-         End
-         Begin VB.TextBox textAuthor 
-            Height          =   450
-            Left            =   1680
-            TabIndex        =   8
-            Text            =   "Author"
-            Top             =   1965
-            Width           =   3500
-         End
-         Begin VB.TextBox textYear 
-            Height          =   450
-            Left            =   1680
-            TabIndex        =   9
-            Text            =   "Year"
-            Top             =   2565
-            Width           =   3500
-         End
-         Begin VB.Label Label3 
-            Caption         =   "Descripción"
-            BeginProperty Font 
-               Name            =   "Lucida Fax"
-               Size            =   12
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            Height          =   300
-            Left            =   5520
-            TabIndex        =   36
-            Top             =   1440
-            Width           =   1500
-         End
-         Begin VB.Label Label2 
-            Caption         =   "Género"
-            BeginProperty Font 
-               Name            =   "Lucida Fax"
-               Size            =   12
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            Height          =   300
-            Left            =   360
-            TabIndex        =   35
-            Top             =   3240
-            Width           =   1005
-         End
-         Begin VB.Label lblTitle 
-            Caption         =   "Título"
-            BeginProperty Font 
-               Name            =   "Lucida Fax"
-               Size            =   12
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            Height          =   300
-            Left            =   360
-            TabIndex        =   22
-            Top             =   1440
-            Width           =   1005
-         End
-         Begin VB.Label lblAuthor 
-            Caption         =   "Autor"
-            BeginProperty Font 
-               Name            =   "Lucida Fax"
-               Size            =   12
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            Height          =   300
-            Left            =   360
-            TabIndex        =   21
-            Top             =   2040
-            Width           =   1005
-         End
-         Begin VB.Label lblyear 
-            Caption         =   "Año"
-            BeginProperty Font 
-               Name            =   "Lucida Fax"
-               Size            =   12
-               Charset         =   0
-               Weight          =   400
-               Underline       =   0   'False
-               Italic          =   0   'False
-               Strikethrough   =   0   'False
-            EndProperty
-            Height          =   300
-            Left            =   360
-            TabIndex        =   20
-            Top             =   2640
-            Width           =   1005
-         End
-      End
-      Begin VB.CommandButton cmdSearch 
-         Caption         =   "Buscar libro"
-         Height          =   700
-         Left            =   720
-         TabIndex        =   15
-         Top             =   6240
-         Width           =   2600
-      End
-      Begin VB.CommandButton cmdDeleteBook 
-         Caption         =   "Eliminar Libro"
-         Height          =   700
-         Left            =   720
-         TabIndex        =   19
-         Top             =   9240
-         Width           =   2600
-      End
-      Begin MSComctlLib.ListView ListBooks 
-         Height          =   3975
-         Left            =   4080
-         TabIndex        =   23
-         Top             =   6240
-         Width           =   12015
-         _ExtentX        =   21193
-         _ExtentY        =   7011
-         View            =   3
-         LabelWrap       =   -1  'True
-         HideSelection   =   -1  'True
-         AllowReorder    =   -1  'True
-         FlatScrollBar   =   -1  'True
-         FullRowSelect   =   -1  'True
-         GridLines       =   -1  'True
-         _Version        =   393217
-         ForeColor       =   -2147483640
-         BackColor       =   -2147483643
-         BorderStyle     =   1
-         Appearance      =   1
-         NumItems        =   0
-      End
-      Begin VB.Image imgCoverImg 
-         Height          =   3000
-         Left            =   600
-         Top             =   2040
-         Width           =   3000
       End
    End
 End
@@ -1009,8 +1009,6 @@ Private Sub cmdAddBook_Click()
     ' Cerrar la conexión
     cn.Close
     
-    MsgBox "Libro " & newBook.title & " añadido", , "Libro agregado"
-    
     Dim itm As ListItem
     Set itm = ListBooks.ListItems.Add(, , newBook.title)
     itm.SubItems(1) = newBook.author
@@ -1019,6 +1017,8 @@ Private Sub cmdAddBook_Click()
     itm.SubItems(4) = newBook.description
     
     initializeTextBox
+    
+    MsgBox "Libro " & newBook.title & " añadido", , "Libro agregado"
 
 End Sub
 
