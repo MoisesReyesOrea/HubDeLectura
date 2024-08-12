@@ -8,28 +8,29 @@ El objetivo es crear una aplicación windows con visual basic 6.0 en que el usua
 
 ## 2. Requerimientos técnicos:
 ### Para visualizar el contenido del codigo es necesario tener instalado:  
-Microsoft Visual Basic 6.0 
+Microsoft Visual Basic 6.0  
 GIT: Debe tener Instalado GIT  
 SQL Server: En este caso la aplicación se conecta a una base de datos local realizada en SQL Server.  
 
 ## 3. ¿Cómo ejecutar la aplicación?
 
+### Clonando el proyecto y ejecutandolo desde Microsoft Visual Basic 6.0 (Desarrollador)
 -- Clona el repositorio con el comando:  ```git clone https://github.com/MoisesReyesOrea/HubDeLectura.git```  
--- Desde Microsoft Visual basic 6.0 abre el proyecto en 'Open project' 
--- Este repositorio no contiene el archivo con las variables de entorno de las credenciales de la base de datos SQL Server, para eso debes crear un archivo 'module'
+-- Desde Microsoft Visual basic 6.0 abre el proyecto en 'Open project'  
+-- Este repositorio no contiene el archivo con las variables de entorno de las credenciales de la base de datos SQL Server, para eso debes crear un archivo 'module'  
 (ej: ModuleEnvirontmentVariable.bas) dentro del proyecto en la carpeta 'Modules' en ese archivo ingresa las credenciales de tu DB, datos necesarios:
 
-Public Const providerDB As String = "SQLOLEDB"
-Public Const sourceDB As String = "Nombre del servidor de tu base de datos"
-Public Const nameDB As String = "Nombre de tu base de datos"
-Public Const userIdDB As String = "tu usuario"
-Public Const passDB As String = "tu contraseña"
-Public Const connectionData As String = "Provider=" + providerDB + ";Data Source=" + sourceDB + ";Initial Catalog=" + nameDB + ";User ID=" + userIdDB + ";Password=" + passDB + ";"
+Public Const providerDB As String = "SQLOLEDB"  
+Public Const sourceDB As String = "Nombre del servidor de tu base de datos"  
+Public Const nameDB As String = "Nombre de tu base de datos"  
+Public Const userIdDB As String = "tu usuario"  
+Public Const passDB As String = "tu contraseña"  
+Public Const connectionData As String = "Provider=" + providerDB + ";Data Source=" + sourceDB + ";Initial Catalog=" + nameDB + ";User ID=" + userIdDB + ";Password=" + passDB + ";"  
 
--- Corre la aplicacion desde el mismo Microsoft Visual Basic 6.0 
+-- Corre la aplicacion desde el mismo Microsoft Visual Basic 6.0  
 
-### Ejecuta el archivo HubDeLecturaMega.exe
---   
+### Ejecuta el archivo HubDeLecturaMega.exe (Usuario)  
+--   descarga y ejecuta el archivo HubDeLectura.exe, te instalará la aplicación.  
 
 ## 4. Explicación
 Ventana de registro para un nuevo usuario, el registro se lleva a cabo en la base de datos para despues ser validado en el inicio de sesión  
@@ -65,13 +66,19 @@ Para la modificación de datos el botón 'Modificar' se habilita despues de alte
 Al presionar el boton de Eliminar usuario se envia una alerta de confirmación antes de realizar la eliminación desde la BD.
 ![EliminacionDeUsuario](https://github.com/user-attachments/assets/0a31dceb-ac90-4cde-86d1-76f3e947ae89)  
 
-Tambien se puede eliminar un libro de la lista general.
+En la ventana de inicio se puede elegir un libro y selecionar el boton ver para visualizar la informacion completa del mismo, tambien en esta sección se muestran los botones 'Marcar como leido', 'Agregar a leyendo' o 'Marcar como no deseado' para añadirlo a cualquiera de las listas correspondientes del usuario.  
+![VentanaVisualizacionDeLibro](https://github.com/user-attachments/assets/20b61a35-7f0c-4bc5-87b3-6e70ca5df306)  
+
+Ventana de lista de libros leyendo, aquí el usuario lleva el registro de los libros que esta leyendo en ese momento antes de completarlos.  
+![VentanaDeListaLibrosLeyendo](https://github.com/user-attachments/assets/c91ed7e3-1dad-4ad1-b5df-c4c91601026a)
+
+Tambien se puede eliminar un libro de la lista general.  
 ![LibroEliminado](https://github.com/user-attachments/assets/bc66e363-449d-4e5c-89d2-1d5d194e0171)  
 
-Diagrama Entidad Relación de la Base de Datos hecha en SQL Server
+Diagrama Entidad Relación de la Base de Datos hecha en SQL Server  
 ![Diagrama ER base de datos](https://github.com/user-attachments/assets/0429a004-5f2d-465f-b3cd-ea7f08e41d2b)  
 
-Fragmento de los comandos para la creación de las tablas de la aplicación, **NOTA: Los archivos de la BD estan en este mismo repositorio en la carpeta 'DB_SQL_Server', [DB_SQL_Server](DB_SQL_Server)**
+Fragmento de los comandos para la creación de las tablas de la aplicación, **NOTA: Los archivos de la BD estan en este mismo repositorio en la carpeta 'DB_SQL_Server', [DB_SQL_Server](DB_SQL_Server)**  
 ![Codigo T SQL base de datos](https://github.com/user-attachments/assets/ecef1d89-f651-4932-8ada-fe688c743818)  
 
 ## 5. Proceso de desarrollo
