@@ -20,7 +20,6 @@ Private mDescription As String
 Private mAuthor As String
 Private mGenre As String
 Private mEditorial As String
-Private mForeword As String
 Private mCoverImg As String
 
 Public Property Get id_book() As String
@@ -55,19 +54,19 @@ Public Property Let Description(ByVal value As String)
     mDescription = value
 End Property
 
-Public Property Get Author() As String
-    Author = mAuthor
+Public Property Get author() As String
+    author = mAuthor
 End Property
 
-Public Property Let Author(ByVal value As String)
+Public Property Let author(ByVal value As String)
     mAuthor = value
 End Property
 
-Public Property Get Genre() As String
-    Genre = mGenre
+Public Property Get genre() As String
+    genre = mGenre
 End Property
 
-Public Property Let Genre(ByVal value As String)
+Public Property Let genre(ByVal value As String)
     mGenre = value
 End Property
 
@@ -77,14 +76,6 @@ End Property
 
 Public Property Let Editorial(ByVal value As String)
     mEditorial = value
-End Property
-
-Public Property Get Foreword() As String
-    Foreword = mForeword
-End Property
-
-Public Property Let Foreword(ByVal value As String)
-    mForeword = value
 End Property
 
 Public Property Get CoverImg() As String
