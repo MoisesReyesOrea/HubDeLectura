@@ -32,9 +32,47 @@ Public Const connectionData As String = "Provider=" + providerDB + ";Data Source
 --   
 
 ## 4. Explicación
+Ventana de registro para un nuevo usuario, el registro se lleva a cabo en la base de datos para despues ser validado en el inicio de sesión  
+![Signup Creacion de usuario](https://github.com/user-attachments/assets/81b06a35-aabd-4316-aa8c-def18da732df)  
 
+Ventana de login, los datos ingresados se buscan en la base de datos si se encuentran se inicia sesión
+![Inicio de sesion](https://github.com/user-attachments/assets/24fcbcfb-7d64-4b61-8946-8ef8e53ed531)  
 
+Ventana de inicio de la aplicación despues de haber iniciado correctamente sesión, en esta sección se muestra la lista completa de los libros disponibles y tambien se puede añadir un nuevo libro al registro
+![InicioRegistrarNuevoLibro](https://github.com/user-attachments/assets/60e115df-bd25-4af3-9c7e-0054f14f3444)  
 
+Notificación despues de agregar un nuevo libro, se añade a la base de datos como a la lista que muestra todos los libros disponibles.  
+![LibroAñadido](https://github.com/user-attachments/assets/60b35cd4-de34-4e4a-ba59-2d52e58152d6)  
+
+Añadiendo un libro a la sección de favoritos, esto se relaciona al id de libro y al id del usuario, se almacena el registro en la BD.
+![AñadirLibroAFavoritos](https://github.com/user-attachments/assets/74b5530e-a986-4720-8678-bf453ec48bb9)
+
+Ventana de lista de libros favoritos, aquí tambien se puede eliminar los libros de la lista  
+![VentanaFavoritos](https://github.com/user-attachments/assets/31649901-2412-4c09-ba85-665dfb73acaa)  
+
+Notificación de libro eliminado
+![LibroEliminadoDeFavoritos](https://github.com/user-attachments/assets/51323c9f-c109-4227-a13d-5047448c96aa)  
+
+Ventana de libros leidos o completados, tambien se cuenta con las ventanas de libros leyendo y libros no deseados
+![VentanaLibrosCompletados](https://github.com/user-attachments/assets/2dc8c27a-4118-4ea9-90d5-c5c92a4b07a2)  
+
+Sección de perfil de usuario, aquí se muestra toda la información perteneciente al usuario, se puede eliminar o modificar su información  
+![VentanaPerfilUsuario](https://github.com/user-attachments/assets/fdb9c9cf-5c47-47bb-ad1a-048cc140bde8)  
+
+Para la modificación de datos el botón 'Modificar' se habilita despues de alterar cualquiera de los datos en los campos.  
+![ModificarInformacionUsuario](https://github.com/user-attachments/assets/39a49115-4031-4e5e-94ed-350d815b2040)  
+
+Al presionar el boton de Eliminar usuario se envia una alerta de confirmación antes de realizar la eliminación desde la BD.
+![EliminacionDeUsuario](https://github.com/user-attachments/assets/0a31dceb-ac90-4cde-86d1-76f3e947ae89)  
+
+Tambien se puede eliminar un libro de la lista general.
+![LibroEliminado](https://github.com/user-attachments/assets/bc66e363-449d-4e5c-89d2-1d5d194e0171)  
+
+Diagrama Entidad Relación de la Base de Datos hecha en SQL Server
+![Diagrama ER base de datos](https://github.com/user-attachments/assets/0429a004-5f2d-465f-b3cd-ea7f08e41d2b)  
+
+Fragmento de los comandos para la creación de las tablas de la aplicación, **NOTA: Los archivos de la BD estan en este mismo repositorio en la carpeta 'DB_SQL_Server', [DB_SQL_Server](DB_SQL_Server)**
+![Codigo T SQL base de datos](https://github.com/user-attachments/assets/ecef1d89-f651-4932-8ada-fe688c743818)  
 
 ## 5. Proceso de desarrollo
 
@@ -48,7 +86,7 @@ Visual Basic 6.0 fue una tecnología ampliamente utilizada en su tiempo, y aún 
 
 **¿Qué puedo hacer diferente?**  
 - Se pudiera organizar mejor el código, creando funciones, modulos y metodos que realizen ciertas tareas repetitivas para así evitar repeticion del mismo, ademas de hacerlo mas entendible y escalable.
-
+- Mejorar la interfaz de usuario, agregar un poco más de estilo a las ventanas de visualización.
 
 **¿Qué no salio bien?**  
 - Me fallo el implementar excepciones y manejo de errores en la aplicacion, para así informar tanto al usuario como al desarrollador de los poblemas que pudieran suceder y como resolverlos.
