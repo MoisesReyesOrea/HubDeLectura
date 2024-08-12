@@ -10,7 +10,16 @@ Begin VB.Form FormBook
    ScaleWidth      =   18660
    StartUpPosition =   3  'Windows Default
    Begin VB.CommandButton cmdGoBackHomeFB 
-      Caption         =   "Regresar"
+      Caption         =   "Regresar a Inicio"
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   9.75
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
       Height          =   700
       Left            =   14520
       TabIndex        =   9
@@ -19,6 +28,15 @@ Begin VB.Form FormBook
    End
    Begin VB.CommandButton cmdAddFavoriteFB 
       Caption         =   "Agregar a favoritos"
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   9.75
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
       Height          =   700
       Left            =   1080
       TabIndex        =   8
@@ -27,6 +45,15 @@ Begin VB.Form FormBook
    End
    Begin VB.CommandButton cmdAddCompletedFB 
       Caption         =   "Marcar como Leido"
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   9.75
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
       Height          =   700
       Left            =   4440
       TabIndex        =   7
@@ -35,6 +62,15 @@ Begin VB.Form FormBook
    End
    Begin VB.CommandButton cmdAddReadingFB 
       Caption         =   "Agregar a Leyendo"
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   9.75
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
       Height          =   700
       Left            =   7800
       TabIndex        =   6
@@ -43,6 +79,15 @@ Begin VB.Form FormBook
    End
    Begin VB.CommandButton cmdAddNoWishedFB 
       Caption         =   "Marcar como NO deseado"
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   9.75
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
       Height          =   700
       Left            =   11160
       TabIndex        =   5
@@ -62,11 +107,11 @@ Begin VB.Form FormBook
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
-      Height          =   2535
+      Height          =   2895
       Left            =   1560
       TabIndex        =   4
       Top             =   5160
-      Width           =   14535
+      Width           =   15615
    End
    Begin VB.Label lblGenreBook 
       BackColor       =   &H00E0E0E0&
@@ -152,6 +197,8 @@ Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 
 
+
+
 Private Sub cmdGoBackHomeFB_Click()
     FormBook.Hide
     FormMain.Show
@@ -186,6 +233,30 @@ Private Sub cmdAddCompletedFB_Click()
         
         MsgBox "Libro añadido a Completados", vbInformation
         
+End Sub
+
+
+Private Sub cmdAddReadingFB_Click()
+
+        Dim sqlQuery As String
+        sqlQuery = queryAddReading(user.Id, bookProperties.id_book)
+        
+        ' Función insertar libro a tabla relacional
+        AddBookToTable (sqlQuery)
+        
+        MsgBox "Libro añadido a lista de Leyendo", vbInformation
+
+End Sub
+
+Private Sub cmdAddNoWishedFB_Click()
+
+        Dim sqlQuery As String
+        sqlQuery = queryAddNowished(user.Id, bookProperties.id_book)
+        
+        ' Función insertar libro a tabla relacional
+        AddBookToTable (sqlQuery)
+        
+        MsgBox "Libro añadido a lista de no deseados", vbInformation
 End Sub
 
 

@@ -34,7 +34,7 @@ Function queryAddCompleted(ByVal id_user As Integer, id_book As Integer) As Stri
 End Function
 
 Function queryAddReading(ByVal id_user As Integer, id_book As Integer) As String
-    queryAddReading = "insert into reading (id_book, id_user) " & _
+    queryAddReading = "insert into readings (id_book, id_user) " & _
     "values (" & id_book & ", " & id_user & ")"
 
 End Function
@@ -131,6 +131,42 @@ Function queryGetCompleted(ByVal id_user As Integer) As String
     "Where c.id_user = " & id_user & _
     "ORDER BY b.id_book, g.genre; "
     
+End Function
+
+Function queryGetReadings(ByVal id_user As Integer) As String
+    queryGetReadings = "SELECT " & _
+    "r.id_reading, " & _
+    "b.id_book, " & _
+    "b.title, " & _
+    "b.year, " & _
+    "a.name AS author_name, " & _
+    "g.genre, " & _
+    "b.description " & _
+    "FROM readings r " & _
+    "JOIN books b ON r.id_book = b.id_book " & _
+    "JOIN authors a ON b.id_author = a.id_author " & _
+    "JOIN book_genres bg ON b.id_book = bg.id_book " & _
+    "JOIN genres g ON bg.id_genre = g.id_genre " & _
+    "Where r.id_user = " & id_user & _
+    "ORDER BY b.id_book, g.genre; "
+End Function
+
+Function queryGetNoWished(ByVal id_user As Integer) As String
+    queryGetNoWished = "SELECT " & _
+    "nw.id_nowished, " & _
+    "b.id_book, " & _
+    "b.title, " & _
+    "b.year, " & _
+    "a.name AS author_name, " & _
+    "g.genre, " & _
+    "b.description " & _
+    "FROM nowished nw " & _
+    "JOIN books b ON nw.id_book = b.id_book " & _
+    "JOIN authors a ON b.id_author = a.id_author " & _
+    "JOIN book_genres bg ON b.id_book = bg.id_book " & _
+    "JOIN genres g ON bg.id_genre = g.id_genre " & _
+    "Where nw.id_user = " & id_user & _
+    "ORDER BY b.id_book, g.genre; "
 End Function
 
 

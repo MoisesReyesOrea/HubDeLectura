@@ -10,6 +10,291 @@ Begin VB.Form FormMain
    ScaleHeight     =   11460
    ScaleWidth      =   20880
    StartUpPosition =   3  'Windows Default
+   Begin VB.Frame fraCompletedBooks 
+      Caption         =   "CompletedBooks"
+      Height          =   5175
+      Left            =   4800
+      TabIndex        =   27
+      Top             =   3720
+      Width           =   16815
+      Begin VB.CommandButton Command6 
+         Caption         =   "Ver libro"
+         Height          =   700
+         Left            =   480
+         TabIndex        =   42
+         Top             =   3960
+         Width           =   2600
+      End
+      Begin VB.CommandButton cmdDeleteCompleted 
+         Caption         =   "Eliminar de libros completados"
+         Height          =   1215
+         Left            =   240
+         TabIndex        =   30
+         Top             =   720
+         Width           =   2775
+      End
+      Begin MSComctlLib.ListView ListCompletedBooks 
+         Height          =   3255
+         Left            =   3240
+         TabIndex        =   28
+         Top             =   1560
+         Width           =   12375
+         _ExtentX        =   21828
+         _ExtentY        =   5741
+         View            =   3
+         LabelWrap       =   -1  'True
+         HideSelection   =   -1  'True
+         FullRowSelect   =   -1  'True
+         GridLines       =   -1  'True
+         _Version        =   393217
+         ForeColor       =   -2147483640
+         BackColor       =   -2147483643
+         BorderStyle     =   1
+         Appearance      =   1
+         NumItems        =   0
+      End
+   End
+   Begin VB.Frame frmNoWished 
+      Caption         =   "NoWished"
+      Height          =   5055
+      Left            =   3600
+      TabIndex        =   31
+      Top             =   6000
+      Width           =   15255
+      Begin VB.CommandButton Command7 
+         Caption         =   "Ver libro"
+         Height          =   700
+         Left            =   360
+         TabIndex        =   43
+         Top             =   3240
+         Width           =   2600
+      End
+      Begin VB.CommandButton cmdDeleteNoWished 
+         Caption         =   "Quitar de libros no deseados"
+         Height          =   855
+         Left            =   360
+         TabIndex        =   33
+         Top             =   600
+         Width           =   2295
+      End
+      Begin MSComctlLib.ListView ListNoWished 
+         Height          =   2655
+         Left            =   3360
+         TabIndex        =   32
+         Top             =   1560
+         Width           =   11535
+         _ExtentX        =   20346
+         _ExtentY        =   4683
+         LabelWrap       =   -1  'True
+         HideSelection   =   -1  'True
+         FullRowSelect   =   -1  'True
+         GridLines       =   -1  'True
+         _Version        =   393217
+         ForeColor       =   -2147483640
+         BackColor       =   -2147483643
+         BorderStyle     =   1
+         Appearance      =   1
+         NumItems        =   0
+      End
+      Begin VB.Label Label5 
+         Alignment       =   2  'Center
+         Caption         =   "Libros no deseados"
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   18
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   495
+         Left            =   4440
+         TabIndex        =   41
+         Top             =   600
+         Width           =   4695
+      End
+   End
+   Begin VB.Frame fraFavorites 
+      Caption         =   "Favorites"
+      Height          =   3735
+      Left            =   3120
+      TabIndex        =   24
+      Top             =   6480
+      Width           =   16455
+      Begin VB.CommandButton Command5 
+         Caption         =   "Ver libro"
+         Height          =   700
+         Left            =   840
+         TabIndex        =   39
+         Top             =   2520
+         Width           =   2600
+      End
+      Begin VB.CommandButton cmdDeleteFavorite 
+         Caption         =   "Eliminar de favoritos"
+         Height          =   700
+         Left            =   960
+         TabIndex        =   29
+         Top             =   600
+         Width           =   2600
+      End
+      Begin MSComctlLib.ListView ListFavorites 
+         Height          =   2295
+         Left            =   4560
+         TabIndex        =   25
+         Top             =   1200
+         Width           =   11535
+         _ExtentX        =   20346
+         _ExtentY        =   4048
+         View            =   3
+         LabelWrap       =   -1  'True
+         HideSelection   =   -1  'True
+         FullRowSelect   =   -1  'True
+         GridLines       =   -1  'True
+         _Version        =   393217
+         ForeColor       =   -2147483640
+         BackColor       =   -2147483643
+         BorderStyle     =   1
+         Appearance      =   1
+         NumItems        =   0
+      End
+      Begin VB.Label Label1 
+         Alignment       =   2  'Center
+         Caption         =   "Favoritos"
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   18
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   495
+         Left            =   6240
+         TabIndex        =   26
+         Top             =   480
+         Width           =   4335
+      End
+   End
+   Begin VB.Frame fraHistory 
+      Caption         =   "Reading"
+      Height          =   4935
+      Left            =   4320
+      TabIndex        =   34
+      Top             =   240
+      Width           =   15495
+      Begin VB.CommandButton Command8 
+         Caption         =   "Ver libro"
+         Height          =   700
+         Left            =   1080
+         TabIndex        =   44
+         Top             =   3240
+         Width           =   2600
+      End
+      Begin VB.CommandButton cmdDeleteReading 
+         Caption         =   "Eliminar de lista leyendo"
+         Height          =   700
+         Left            =   1200
+         TabIndex        =   38
+         Top             =   1080
+         Width           =   2600
+      End
+      Begin MSComctlLib.ListView ListReadings 
+         Height          =   2655
+         Left            =   4440
+         TabIndex        =   37
+         Top             =   1680
+         Width           =   10215
+         _ExtentX        =   18018
+         _ExtentY        =   4683
+         LabelWrap       =   -1  'True
+         HideSelection   =   -1  'True
+         FullRowSelect   =   -1  'True
+         GridLines       =   -1  'True
+         _Version        =   393217
+         ForeColor       =   -2147483640
+         BackColor       =   -2147483643
+         BorderStyle     =   1
+         Appearance      =   1
+         NumItems        =   0
+      End
+      Begin VB.Label Label4 
+         Alignment       =   2  'Center
+         Caption         =   "Libros que se están leyendo"
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   18
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   615
+         Left            =   5640
+         TabIndex        =   40
+         Top             =   480
+         Width           =   5055
+      End
+   End
+   Begin VB.Frame fraNavbar 
+      Caption         =   "Navbar"
+      Height          =   11415
+      Left            =   30
+      TabIndex        =   0
+      Top             =   0
+      Width           =   3000
+      Begin VB.CommandButton cmdPerfil 
+         Caption         =   "Perfil"
+         Height          =   1000
+         Left            =   360
+         TabIndex        =   6
+         Top             =   9800
+         Width           =   2175
+      End
+      Begin VB.CommandButton cmdNoWished 
+         Caption         =   "No deseados"
+         Height          =   1000
+         Left            =   360
+         TabIndex        =   5
+         Top             =   6800
+         Width           =   2175
+      End
+      Begin VB.CommandButton cmdReadings 
+         Caption         =   "Leyendo"
+         Height          =   1000
+         Left            =   360
+         TabIndex        =   4
+         Top             =   5300
+         Width           =   2175
+      End
+      Begin VB.CommandButton cmdFavorites 
+         Appearance      =   0  'Flat
+         Caption         =   "Favoritos"
+         Height          =   1000
+         Left            =   360
+         TabIndex        =   2
+         Top             =   2300
+         Width           =   2175
+      End
+      Begin VB.CommandButton cmdHome 
+         Caption         =   "Inicio"
+         Height          =   1000
+         Left            =   360
+         TabIndex        =   1
+         Top             =   800
+         Width           =   2175
+      End
+      Begin VB.CommandButton cmdCompletedBooks 
+         Caption         =   "Completados"
+         Height          =   1000
+         Left            =   360
+         TabIndex        =   3
+         Top             =   3800
+         Width           =   2175
+      End
+   End
    Begin VB.Frame fraHome 
       Caption         =   "Home"
       Height          =   10635
@@ -111,7 +396,7 @@ Begin VB.Form FormMain
             EndProperty
             Height          =   300
             Left            =   5520
-            TabIndex        =   37
+            TabIndex        =   36
             Top             =   1440
             Width           =   1500
          End
@@ -128,7 +413,7 @@ Begin VB.Form FormMain
             EndProperty
             Height          =   300
             Left            =   360
-            TabIndex        =   36
+            TabIndex        =   35
             Top             =   3240
             Width           =   1005
          End
@@ -229,285 +514,12 @@ Begin VB.Form FormMain
          Width           =   3000
       End
    End
-   Begin VB.Frame fraCompletedBooks 
-      Caption         =   "CompletedBooks"
-      Height          =   5175
-      Left            =   4800
-      TabIndex        =   27
-      Top             =   3720
-      Width           =   16815
-      Begin VB.CommandButton Command6 
-         Caption         =   "Ver libro"
-         Height          =   700
-         Left            =   480
-         TabIndex        =   43
-         Top             =   3960
-         Width           =   2600
-      End
-      Begin VB.CommandButton cmdDatosDB 
-         Caption         =   "DatosDB"
-         Height          =   1095
-         Left            =   360
-         TabIndex        =   31
-         Top             =   2400
-         Width           =   2655
-      End
-      Begin VB.CommandButton cmdDeleteCompleted 
-         Caption         =   "Eliminar de Completados"
-         Height          =   1215
-         Left            =   240
-         TabIndex        =   30
-         Top             =   720
-         Width           =   2775
-      End
-      Begin MSComctlLib.ListView ListCompletedBooks 
-         Height          =   3255
-         Left            =   3240
-         TabIndex        =   28
-         Top             =   1560
-         Width           =   12375
-         _ExtentX        =   21828
-         _ExtentY        =   5741
-         View            =   3
-         LabelWrap       =   -1  'True
-         HideSelection   =   -1  'True
-         FullRowSelect   =   -1  'True
-         GridLines       =   -1  'True
-         _Version        =   393217
-         ForeColor       =   -2147483640
-         BackColor       =   -2147483643
-         BorderStyle     =   1
-         Appearance      =   1
-         NumItems        =   0
-      End
-   End
-   Begin VB.Frame fraHistory 
-      Caption         =   "Reading"
-      Height          =   4935
-      Left            =   3480
-      TabIndex        =   35
-      Top             =   1200
-      Width           =   15495
-      Begin VB.CommandButton Command8 
-         Caption         =   "Ver libro"
-         Height          =   700
-         Left            =   1320
-         TabIndex        =   45
-         Top             =   2280
-         Width           =   2600
-      End
-      Begin VB.CommandButton Command3 
-         Caption         =   "Eliminar del historial"
-         Height          =   700
-         Left            =   720
-         TabIndex        =   39
-         Top             =   840
-         Width           =   2600
-      End
-      Begin MSComctlLib.ListView ListReadings 
-         Height          =   2175
-         Left            =   5160
-         TabIndex        =   38
-         Top             =   1680
-         Width           =   9495
-         _ExtentX        =   16748
-         _ExtentY        =   3836
-         LabelWrap       =   -1  'True
-         HideSelection   =   -1  'True
-         _Version        =   393217
-         ForeColor       =   -2147483640
-         BackColor       =   -2147483643
-         BorderStyle     =   1
-         Appearance      =   1
-         NumItems        =   0
-      End
-      Begin VB.Label Label4 
-         Caption         =   "Libros que se estan leyendo"
-         Height          =   615
-         Left            =   5640
-         TabIndex        =   41
-         Top             =   480
-         Width           =   3855
-      End
-   End
-   Begin VB.Frame frmNoWished 
-      Caption         =   "NoWished"
-      Height          =   5055
-      Left            =   4320
-      TabIndex        =   32
-      Top             =   4200
-      Width           =   15255
-      Begin VB.CommandButton Command7 
-         Caption         =   "Ver libro"
-         Height          =   700
-         Left            =   360
-         TabIndex        =   44
-         Top             =   3240
-         Width           =   2600
-      End
-      Begin VB.CommandButton Command1 
-         Caption         =   "Quitar de libros no deseados"
-         Height          =   855
-         Left            =   360
-         TabIndex        =   34
-         Top             =   600
-         Width           =   2295
-      End
-      Begin MSComctlLib.ListView ListNoWished 
-         Height          =   2655
-         Left            =   3360
-         TabIndex        =   33
-         Top             =   1560
-         Width           =   11535
-         _ExtentX        =   20346
-         _ExtentY        =   4683
-         LabelWrap       =   -1  'True
-         HideSelection   =   -1  'True
-         _Version        =   393217
-         ForeColor       =   -2147483640
-         BackColor       =   -2147483643
-         BorderStyle     =   1
-         Appearance      =   1
-         NumItems        =   0
-      End
-      Begin VB.Label Label5 
-         Caption         =   "Libros no deseados"
-         Height          =   495
-         Left            =   4440
-         TabIndex        =   42
-         Top             =   600
-         Width           =   4695
-      End
-   End
-   Begin VB.Frame fraFavorites 
-      Caption         =   "Favorites"
-      Height          =   3735
-      Left            =   3120
-      TabIndex        =   24
-      Top             =   6480
-      Width           =   16455
-      Begin VB.CommandButton Command5 
-         Caption         =   "Ver libro"
-         Height          =   700
-         Left            =   840
-         TabIndex        =   40
-         Top             =   2520
-         Width           =   2600
-      End
-      Begin VB.CommandButton cmdDeleteFavorite 
-         Caption         =   "Eliminar de favoritos"
-         Height          =   700
-         Left            =   960
-         TabIndex        =   29
-         Top             =   600
-         Width           =   2600
-      End
-      Begin MSComctlLib.ListView ListFavorites 
-         Height          =   2295
-         Left            =   4560
-         TabIndex        =   25
-         Top             =   1200
-         Width           =   11535
-         _ExtentX        =   20346
-         _ExtentY        =   4048
-         View            =   3
-         LabelWrap       =   -1  'True
-         HideSelection   =   -1  'True
-         FullRowSelect   =   -1  'True
-         GridLines       =   -1  'True
-         _Version        =   393217
-         ForeColor       =   -2147483640
-         BackColor       =   -2147483643
-         BorderStyle     =   1
-         Appearance      =   1
-         NumItems        =   0
-      End
-      Begin VB.Label Label1 
-         Alignment       =   2  'Center
-         Caption         =   "Favoritos"
-         BeginProperty Font 
-            Name            =   "MS Sans Serif"
-            Size            =   18
-            Charset         =   0
-            Weight          =   700
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   495
-         Left            =   6240
-         TabIndex        =   26
-         Top             =   480
-         Width           =   4335
-      End
-   End
-   Begin VB.Frame fraNavbar 
-      Caption         =   "Navbar"
-      Height          =   11415
-      Left            =   30
-      TabIndex        =   0
-      Top             =   0
-      Width           =   3000
-      Begin VB.CommandButton cmdPerfil 
-         Caption         =   "Perfil"
-         Height          =   1000
-         Left            =   360
-         TabIndex        =   6
-         Top             =   9800
-         Width           =   2175
-      End
-      Begin VB.CommandButton cmdNoWished 
-         Caption         =   "No deseados"
-         Height          =   1000
-         Left            =   360
-         TabIndex        =   5
-         Top             =   6800
-         Width           =   2175
-      End
-      Begin VB.CommandButton cmdReadings 
-         Caption         =   "Leyendo"
-         Height          =   1000
-         Left            =   360
-         TabIndex        =   4
-         Top             =   5300
-         Width           =   2175
-      End
-      Begin VB.CommandButton cmdFavorites 
-         Appearance      =   0  'Flat
-         Caption         =   "Favoritos"
-         Height          =   1000
-         Left            =   360
-         TabIndex        =   2
-         Top             =   2300
-         Width           =   2175
-      End
-      Begin VB.CommandButton cmdHome 
-         Caption         =   "Inicio"
-         Height          =   1000
-         Left            =   360
-         TabIndex        =   1
-         Top             =   800
-         Width           =   2175
-      End
-      Begin VB.CommandButton cmdCompletedBooks 
-         Caption         =   "Leidos"
-         Height          =   1000
-         Left            =   360
-         TabIndex        =   3
-         Top             =   3800
-         Width           =   2175
-      End
-   End
 End
 Attribute VB_Name = "FormMain"
 Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
-'Dim cn As New ADODB.Connection  'Creamos el objeto Connection.
-'Public WithEvents rs As ADODB.Recordset 'Creamos el Recordset con soporte de eventos.
-'Dim rs As New ADODB.Recordset 'Creamos el objeto Recordset.
-
 Option Explicit
 
 Private Sub cmdClear_Click()
@@ -523,7 +535,7 @@ Private Sub cmdDeleteCompleted_Click()
         Debug.Print "book id: " & completedId
         
         Dim sqlQuery As String
-        sqlQuery = "delete from favorites where id_favorite =" & completedId
+        sqlQuery = "delete from completed where id_completed =" & completedId
         
         'Set cmd = New ADODB.Command 'Activamos el command
     
@@ -536,8 +548,73 @@ Private Sub cmdDeleteCompleted_Click()
         ' Cerrar la conexión
         cn.Close
         
-        ListCompletedBooks.ListItems.Remove ListFavorites.SelectedItem.Index
+        ListCompletedBooks.ListItems.Remove ListCompletedBooks.SelectedItem.Index
         MsgBox "Eliminado de libros Completados", vbInformation
+        
+        Exit Sub
+        
+    Else
+        MsgBox "Selecciona un libro para eliminar"
+    End If
+End Sub
+
+
+Private Sub cmdDeleteReading_Click()
+    If Not ListReadings.SelectedItem Is Nothing Then
+        
+        Dim readingId As Integer
+        readingId = ListReadings.SelectedItem.SubItems(6)
+        
+        'Debug.Print "book id: " & readingId
+        
+        Dim sqlQuery As String
+        sqlQuery = "delete from readings where id_reading =" & readingId
+        
+        'Set cmd = New ADODB.Command 'Activamos el command
+    
+        'Abrimos la base de datos
+        cn.Open connectionData ' Constante "connectionData" contiene las variables de entorno para la conexion a la DB archivo no mostrado
+        cmd.ActiveConnection = cn
+        cmd.CommandText = sqlQuery
+        cmd.Execute
+
+        ' Cerrar la conexión
+        cn.Close
+        
+        ListReadings.ListItems.Remove ListReadings.SelectedItem.Index
+        MsgBox "Eliminado de lista de libro leyendo", vbInformation
+        
+        Exit Sub
+        
+    Else
+        MsgBox "Selecciona un libro para eliminar"
+    End If
+End Sub
+
+Private Sub cmdDeleteNoWished_Click()
+        If Not ListNoWished.SelectedItem Is Nothing Then
+        
+        Dim nowishedId As Integer
+        nowishedId = ListNoWished.SelectedItem.SubItems(6)
+        
+        'Debug.Print "book id: " & readingId
+        
+        Dim sqlQuery As String
+        sqlQuery = "delete from nowished where id_nowished =" & nowishedId
+        
+        'Set cmd = New ADODB.Command 'Activamos el command
+    
+        'Abrimos la base de datos
+        cn.Open connectionData ' Constante "connectionData" contiene las variables de entorno para la conexion a la DB archivo no mostrado
+        cmd.ActiveConnection = cn
+        cmd.CommandText = sqlQuery
+        cmd.Execute
+
+        ' Cerrar la conexión
+        cn.Close
+        
+        ListNoWished.ListItems.Remove ListNoWished.SelectedItem.Index
+        MsgBox "Eliminado de lista de libros no deseados", vbInformation
         
         Exit Sub
         
@@ -614,7 +691,63 @@ Private Sub cmdBookView_Click()
     
 End Sub
 
-'Private favorites As Collection
+Private Sub cmdReadings_Click()
+    ' Funcion para mostrar u ocultar los frames que son llamados
+    hideShowFrames False, False, False, True, False
+    
+    Dim sqlQuery As String
+    Debug.Print user.Id
+    sqlQuery = queryGetReadings(user.Id)
+    
+    'sqlQuery = queryGetFavorites(1)
+    Set rs = New ADODB.Recordset 'Activamos el Recordset
+
+    'Abrimos la base de datos
+    cn.Open connectionData
+    rs.Source = "readings" 'Especificamos la fuente de datos. En este caso la tabla.
+    rs.CursorType = adOpenKeyset 'Definimos el tipo de cursor.
+    rs.LockType = adLockOptimistic 'Definimos el tipo de bloqueo.
+    rs.Open sqlQuery, cn 'Abrimos el Recordset y lo llenamos con una consulta SQL.
+    
+    
+    If rs.BOF And rs.EOF Then
+    MsgBox "No hay libros agregados en lista de leyendo."
+    
+    Else
+    rs.MoveFirst 'Nos posicionamos en el primer registro del Recordset.
+    Debug.Print rs.Fields("id_book")
+    
+    Dim itm As ListItem
+    ListReadings.ListItems.Clear
+    
+    Do Until rs.EOF 'Repite hasta que se lea todo el Recordset.
+    Set itm = ListReadings.ListItems.Add(, , rs.Fields("title"))
+    itm.SubItems(1) = rs.Fields("author_name")
+    itm.SubItems(2) = rs.Fields("year")
+    itm.SubItems(3) = rs.Fields("genre")
+    itm.SubItems(4) = rs.Fields("description")
+    itm.SubItems(5) = rs.Fields("id_book")
+    itm.SubItems(6) = rs.Fields("id_reading")
+    rs.MoveNext 'Nos movemos al siguiente registro.
+    Loop
+    
+    End If
+
+    ' Cerrar el recordset y la conexión
+    rs.Close
+    cn.Close
+
+    ' Limpiar objetos
+    Set rs = Nothing
+    Set cn = Nothing
+    
+    
+End Sub
+
+
+Private Sub Command1_Click()
+
+End Sub
 
 Private Sub Form_Load()
     
@@ -804,6 +937,52 @@ End Sub
 Private Sub cmdNoWished_Click()
     ' Funcion para mostrar u ocultar los frames que son llamados
     hideShowFrames False, False, False, False, True
+    
+    Dim sqlQuery As String
+    Debug.Print user.Id
+    sqlQuery = queryGetNoWished(user.Id)
+    
+    Set rs = New ADODB.Recordset 'Activamos el Recordset
+
+    'Abrimos la base de datos
+    cn.Open connectionData
+    rs.Source = "favorites" 'Especificamos la fuente de datos. En este caso la tabla.
+    rs.CursorType = adOpenKeyset 'Definimos el tipo de cursor.
+    rs.LockType = adLockOptimistic 'Definimos el tipo de bloqueo.
+    rs.Open sqlQuery, cn 'Abrimos el Recordset y lo llenamos con una consulta SQL.
+    
+    If rs.BOF And rs.EOF Then
+    MsgBox "No hay libros agregados a no deseados aún."
+    
+    Else
+    rs.MoveFirst 'Nos posicionamos en el primer registro del Recordset.
+    Debug.Print rs.Fields("id_book")
+    
+    Dim itm As ListItem
+    ListNoWished.ListItems.Clear
+    
+    Do Until rs.EOF 'Repite hasta que se lea todo el Recordset.
+    Set itm = ListNoWished.ListItems.Add(, , rs.Fields("title"))
+    itm.SubItems(1) = rs.Fields("author_name")
+    itm.SubItems(2) = rs.Fields("year")
+    itm.SubItems(3) = rs.Fields("genre")
+    itm.SubItems(4) = rs.Fields("description")
+    itm.SubItems(5) = rs.Fields("id_book")
+    itm.SubItems(6) = rs.Fields("id_nowished")
+    rs.MoveNext 'Nos movemos al siguiente registro.
+    Loop
+    
+    End If
+
+    ' Cerrar el recordset y la conexión
+    rs.Close
+    cn.Close
+
+    ' Limpiar objetos
+    Set rs = Nothing
+    Set cn = Nothing
+    
+    
 End Sub
 
 Private Sub cmdAddBook_Click()
@@ -843,38 +1022,6 @@ Private Sub cmdAddBook_Click()
 
 End Sub
 
-Private Sub cmdDatosDB_Click()
-Set rs = New ADODB.Recordset 'Activamos el Recordset
-
-'Abrimos la base de datos
-cn.Open connectionData
-rs.Source = "books" 'Especificamos la fuente de datos. En este caso la tabla "contactos".
-rs.CursorType = adOpenKeyset 'Definimos el tipo de cursor.
-rs.LockType = adLockOptimistic 'Definimos el tipo de bloqueo.
-rs.Open "select * from books", cn 'Abrimos el Recordset y lo llenamos con una consulta SQL.
-
-Dim itm As ListItem
-
-rs.MoveFirst 'Nos posicionamos en el primer registro del Recordset.
-Do Until rs.EOF 'Repite hasta que se lea todo el Recordset.
-Set itm = ListCompletedBooks.ListItems.Add(, , rs.Fields("title"))
-'itm.SubItems(1) = rs.Fields("author")
-itm.SubItems(2) = rs.Fields("year")
-'itm.SubItems(3) = rs.Fields("genre")
-itm.SubItems(4) = rs.Fields("description")
-rs.MoveNext 'Nos movemos al siguiente registro.
-Loop
-
-' Cerrar el recordset y la conexión
-    rs.Close
-    cn.Close
-
-    ' Limpiar objetos
-    Set rs = Nothing
-    Set cn = Nothing
-
-End Sub
-
 Private Sub cmdFavorites_Click()
     ' Funcion para mostrar u ocultar los frames que son llamados
     hideShowFrames False, True, False, False, False
@@ -892,13 +1039,6 @@ Private Sub cmdFavorites_Click()
     rs.CursorType = adOpenKeyset 'Definimos el tipo de cursor.
     rs.LockType = adLockOptimistic 'Definimos el tipo de bloqueo.
     rs.Open sqlQuery, cn 'Abrimos el Recordset y lo llenamos con una consulta SQL.
-    
-    'If rs.BOF And rs.EOF Then
-    '    MsgBox "No hay favoritos agregados aún."
-    'Else
-        
-    'End If
-    
     
     If rs.BOF And rs.EOF Then
     MsgBox "No hay favoritos agregados aún."
