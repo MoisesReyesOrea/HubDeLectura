@@ -1,15 +1,15 @@
 # Hub de lectura - Visual Basic 6.0, WinForm proyecto para Mega - Liderly
 
 ## 1. Descripción
-Este repositorio contiene una aplicacion de escritorio para windows hecha con el lenguaje Visual Basic 6.0 y SQL Server (Transact SQL). Esta aplicación windows es acerca de un Hub de libros en la cual se pueden agregar usuarios, cada usuario puede seleccionar su contenido como Favoritos, libros ya leidos, libros que está leyendo, libros no deseados, ademas de poder visualizar es posible añadir, eliminar y modificar tanto usuarios como libros. 
+Este repositorio contiene una aplicacion de escritorio para windows hecha con el lenguaje Visual Basic 6.0 y SQL Server (Transact SQL). Esta aplicación windows es acerca de un Hub de libros en la cual se pueden agregar usuarios, cada usuario puede seleccionar su contenido como Favoritos, libros ya leidos, libros que está leyendo, libros no deseados, ademas de poder visualizar, es posible añadir, eliminar y modificar tanto usuarios como libros. 
 
 ### Objetivo
 El objetivo es crear una aplicación windows con visual basic 6.0 en que el usuario pueda organizar y controlar los libros que desea leer.
 
 ## 2. Requerimientos técnicos:
 ### Para visualizar el contenido del codigo es necesario tener instalado:  
-Microsoft Visual Basic 6.0  
-GIT: Debe tener Instalado GIT  
+Microsoft Visual Basic 6.0.  
+GIT: Debe tener Instalado GIT.  
 SQL Server: En este caso la aplicación se conecta a una base de datos local realizada en SQL Server.  
 
 ## 3. ¿Cómo ejecutar la aplicación?
@@ -33,13 +33,13 @@ Public Const connectionData As String = "Provider=" + providerDB + ";Data Source
 --   descarga y ejecuta el archivo HubDeLectura.exe, te instalará la aplicación.  
 
 ## 4. Explicación
-Ventana de registro para un nuevo usuario, el registro se lleva a cabo en la base de datos para despues ser validado en el inicio de sesión  
+Ventana de registro para un nuevo usuario, el registro se lleva a cabo en la base de datos para despues ser validado en el inicio de sesión.  
 ![Signup Creacion de usuario](https://github.com/user-attachments/assets/81b06a35-aabd-4316-aa8c-def18da732df)  
 
-Ventana de login, los datos ingresados se buscan en la base de datos si se encuentran se inicia sesión
+Ventana de login, los datos ingresados se buscan en la base de datos si se encuentran se inicia sesión.
 ![Inicio de sesion](https://github.com/user-attachments/assets/24fcbcfb-7d64-4b61-8946-8ef8e53ed531)  
 
-Ventana de inicio de la aplicación despues de haber iniciado correctamente sesión, en esta sección se muestra la lista completa de los libros disponibles y tambien se puede añadir un nuevo libro al registro
+Ventana de inicio de la aplicación despues de haber iniciado correctamente sesión, en esta sección se muestra la lista completa de los libros disponibles y tambien se puede añadir un nuevo libro al registro.
 ![InicioRegistrarNuevoLibro](https://github.com/user-attachments/assets/60e115df-bd25-4af3-9c7e-0054f14f3444)  
 
 Notificación despues de agregar un nuevo libro, se añade a la base de datos como a la lista que muestra todos los libros disponibles.  
@@ -48,16 +48,16 @@ Notificación despues de agregar un nuevo libro, se añade a la base de datos co
 Añadiendo un libro a la sección de favoritos, esto se relaciona al id de libro y al id del usuario, se almacena el registro en la BD.
 ![AñadirLibroAFavoritos](https://github.com/user-attachments/assets/74b5530e-a986-4720-8678-bf453ec48bb9)
 
-Ventana de lista de libros favoritos, aquí tambien se puede eliminar los libros de la lista  
+Ventana de lista de libros favoritos, aquí tambien se puede eliminar los libros de la lista.  
 ![VentanaFavoritos](https://github.com/user-attachments/assets/31649901-2412-4c09-ba85-665dfb73acaa)  
 
 Notificación de libro eliminado
 ![LibroEliminadoDeFavoritos](https://github.com/user-attachments/assets/51323c9f-c109-4227-a13d-5047448c96aa)  
 
-Ventana de libros leidos o completados, tambien se cuenta con las ventanas de libros leyendo y libros no deseados
+Ventana de libros leidos o completados, tambien se cuenta con las ventanas de libros leyendo y libros no deseados.
 ![VentanaLibrosCompletados](https://github.com/user-attachments/assets/2dc8c27a-4118-4ea9-90d5-c5c92a4b07a2)  
 
-Sección de perfil de usuario, aquí se muestra toda la información perteneciente al usuario, se puede eliminar o modificar su información  
+Sección de perfil de usuario, aquí se muestra toda la información perteneciente al usuario, se puede eliminar o modificar su información.  
 ![VentanaPerfilUsuario](https://github.com/user-attachments/assets/fdb9c9cf-5c47-47bb-ad1a-048cc140bde8)  
 
 Para la modificación de datos el botón 'Modificar' se habilita despues de alterar cualquiera de los datos en los campos.  
@@ -66,7 +66,7 @@ Para la modificación de datos el botón 'Modificar' se habilita despues de alte
 Al presionar el boton de Eliminar usuario se envia una alerta de confirmación antes de realizar la eliminación desde la BD.
 ![EliminacionDeUsuario](https://github.com/user-attachments/assets/0a31dceb-ac90-4cde-86d1-76f3e947ae89)  
 
-En la ventana de inicio se puede elegir un libro y selecionar el boton ver para visualizar la informacion completa del mismo, tambien en esta sección se muestran los botones 'Marcar como leido', 'Agregar a leyendo' o 'Marcar como no deseado' para añadirlo a cualquiera de las listas correspondientes del usuario.  
+En la ventana de inicio se puede elegir un libro y selecionar el boton 'Ver libro' para visualizar la información completa del mismo, tambien en esta sección se muestran los botones 'Marcar como leido', 'Agregar a leyendo' o 'Marcar como no deseado' para añadirlo a cualquiera de las listas correspondientes del usuario.  
 ![VentanaVisualizacionDeLibro](https://github.com/user-attachments/assets/20b61a35-7f0c-4bc5-87b3-6e70ca5df306)  
 
 Ventana de lista de libros leyendo, aquí el usuario lleva el registro de los libros que esta leyendo en ese momento antes de completarlos.  
@@ -75,7 +75,7 @@ Ventana de lista de libros leyendo, aquí el usuario lleva el registro de los li
 Tambien se puede eliminar un libro de la lista general.  
 ![LibroEliminado](https://github.com/user-attachments/assets/bc66e363-449d-4e5c-89d2-1d5d194e0171)  
 
-Diagrama Entidad Relación de la Base de Datos hecha en SQL Server  
+Diagrama Entidad Relación de la Base de Datos hecha en SQL Server.  
 ![Diagrama ER base de datos](https://github.com/user-attachments/assets/0429a004-5f2d-465f-b3cd-ea7f08e41d2b)  
 
 Fragmento de los comandos para la creación de las tablas de la aplicación, **NOTA: Los archivos de la BD estan en este mismo repositorio en la carpeta 'DB_SQL_Server', [DB_SQL_Server](DB_SQL_Server)**  
