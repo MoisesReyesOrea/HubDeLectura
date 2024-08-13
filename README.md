@@ -29,9 +29,6 @@ Public Const connectionData As String = "Provider=" + providerDB + ";Data Source
 
 -- Corre la aplicacion desde el mismo Microsoft Visual Basic 6.0  
 
-### Ejecuta el archivo HubDeLecturaMega.exe (Usuario)  
---   descarga y ejecuta el archivo HubDeLectura.exe, te instalará la aplicación.  
-
 ## 4. Explicación
 Ventana de registro para un nuevo usuario, el registro se lleva a cabo en la base de datos para despues ser validado en el inicio de sesión.  
 ![Signup Creacion de usuario](https://github.com/user-attachments/assets/81b06a35-aabd-4316-aa8c-def18da732df)  
